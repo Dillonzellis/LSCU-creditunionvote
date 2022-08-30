@@ -1,0 +1,1837 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- Define Charset -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Responsive Meta Tag -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+
+    <title>GOTV</title><!-- Responsive Styles and Valid Styles -->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+    .bs-example{
+        margin: 20px;
+    }
+</style>
+	
+    <style type="text/css">
+    
+    	
+	    body{
+            width: 100%; 
+            margin:0; 
+            padding:0; 
+            -webkit-font-smoothing: antialiased;
+			/* Location of the image */
+  background-image: url("imgs/bg.jpg");
+  
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+  
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+  
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#464646;
+  
+  /* SHORTHAND CSS NOTA
+   * background: url(imgs/bg.jpg) center center cover no-repeat fixed;
+   */
+        }
+        
+        p,h1,h2,h3,h4,img{
+	        margin-top:0;
+			margin-bottom:0;
+			padding-top:0;
+			padding-bottom:0;
+			color: #000000;
+        }
+		
+		a{
+			color: #154da2;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		
+		.myButton {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:10px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+	color: #fff;
+	text-decoration: underline;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+		
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(imgs/bg.jpg);
+  }
+	}
+        
+        span.preheader{display: none; font-size: 1px;}
+        
+        html{
+            width: 100%; 
+        }
+        
+        table{
+            font-size: 16px;
+            border: 0;
+        }
+        
+        /* ----------- responsivity ----------- */
+        @media only screen and (max-width: 640px){
+			/*------ top header ------ */
+			.view-online{font-size: 12px !important;}
+            .main-header{line-height: 28px !important; font-size: 17px !important;}
+            .main-subheader{line-height: 28px !important;}
+            
+			/*----- main image -------*/
+			.main-image{width: 100% !important; height: auto !important;}
+			
+			/*-------- container --------*/			
+			.container600{width: 440px !important;}
+			.container560{width: 400px !important;}
+			
+			/*-------- divider --------*/			
+			.divider{width: 440px !important; height: 1px !important;}
+			
+			/*----- banner -------*/
+			.banner{width: 400px !important; height: auto !important;}
+			/*-------- secions ----------*/
+			.section-item{width: 400px !important;}
+            .section-img{width: 400px !important; height: auto !important;}
+			           
+			/*-------- footer ------------*/
+			.unsubscribe{line-height: 26px !important; font-size: 13px !important;}
+			.copy{line-height: 26px !important; font-size: 14px !important;}
+			.hide-iphone{display: none !important;}
+			.vertical-spacing{width: 400px !important;}		
+			.footer-item{width: 200px !important;}
+		}
+		
+		@media only screen and (max-width: 479px){
+			
+			/*------ top header ------ */
+			.view-online{font-size: 12px !important;}
+            .main-header{line-height: 28px !important; font-size: 15px !important;}
+            .main-subheader{line-height: 28px !important;}
+            .logo{width: 280px !important;}
+            .nav{width: 280px !important;}
+			/*----- main image -------*/
+			.main-image{width: 100% !important; height: auto !important;}
+			
+			/*-------- container --------*/			
+			.container600{width: 100% !important;}
+			.container560{width: 240px !important;}
+			
+			/*-------- divider --------*/			
+			.divider{width: 280px !important; height: 1px !important;}
+			
+			/*----- banner -------*/
+			.banner{width: 240px !important; height: auto !important;}
+			/*-------- secions ----------*/
+			.section-item{width: 240px !important;}
+            .section-img{width: 240px !important; height: auto !important;}
+			           
+			/*-------- footer ------------*/
+			.unsubscribe{line-height: 26px !important; font-size: 13px !important;}
+			.copy{line-height: 26px !important; font-size: 14px !important;}
+			.hide-iphone{display: block !important;}
+			.vertical-spacing{width: 240px !important;}		
+			.footer-item{width: 240px !important;}
+			
+			
+		}
+		
+	.main-header {line-height: 28px !important; font-size: 17px !important;}
+.main-header {line-height: 28px !important; font-size: 15px !important;}
+.section-item {width: 400px !important;}
+.section-item {width: 240px !important;}
+    .main-subheader {line-height: 28px !important;}
+.main-subheader {line-height: 28px !important;}
+    </style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-12265204-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-12265204-1');
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+
+	<table border="0" width="100%" cellpadding="0" cellspacing="0">
+	
+		
+		<!-------------- top header ------------->
+		<tr mc:repeatable>
+			<td align="center">
+				<table width="900" cellpadding="0" align="center" cellspacing="0" border="0" class="container600">
+					<tr>
+						<td align="center">
+							<table align="center" width="100%" cellpadding="0" cellspacing="0">
+								<tr>
+									<td width="63%" style="padding: 15px;">&nbsp;</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!-------------- end top header ------------->
+
+		
+		<!-------------- main image ------------->
+		<tr mc:repeatable>
+			<td align="center">
+				<table width="900" cellpadding="0" align="center" cellspacing="0" border="0" class="container600">
+					<tr>
+						<td align="center">
+				        	<img editable="true" mc:edit="main-image" src="imgs/header.png" style="display: block; width: 900px; height: 301px;" border="0" alt="main image" class="main-image" />
+				        </td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<!-------------- main text ------------->
+		<tr mc:repeatable>
+			<td align="center">
+				<table width="900" cellpadding="0" align="center" cellspacing="0" border="0" class="container600">
+					<tr>
+        				<td align="center"><table border="0" width="100%" align="center" cellpadding="5" cellspacing="0">
+        				  <tr><td height="25" align="center" style="font-size: 18px; font-family: 'PT Sans', Arial, sans-serif; line-height: 20px; color: #fff;"><a href="index.html" class="myButton">LSCU Endorsed Candidates</a> <a href="supported.html" class="myButton">LSCU PACs Supported Candidates</a> <a href="resources.html" class="myButton">Voter Resources</a></td></tr>
+        				  <tr>
+        				    <td align="left" mc:edit="main-subheader" style="font-size: 18px; font-family: 'PT Sans', Arial, sans-serif; line-height: 20px;" class="main-subheader" bgcolor="#ffffff"><table border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+        				      <tr>
+        				        <td width="100%" valign="top"><br>
+        				          <h1 id="lscu2">LSCU PACs Supported Candidates</h1>
+        				          <p>&nbsp;</p>
+        				          <p>Political Action Committees, also called PACs, are used by organizations such as LSCU for the purpose of raising and spending money to help elect candidates who are supportive of their industry. <strong>LSCU’s state and federal PACs’ are non-partisan and sole mission is to support candidates for public office that are pro-credit union.</strong> The following is a list of candidates that LSCU’s Federal and State PACs are supporting in the 2022 elections.</p>
+        				          <p>&nbsp;</p>
+        				          <p><strong>LSCU Federal PAC/CULAC</strong></p>
+        				          <div class="bs-example">
+        				            <div class="accordion" id="accordionExample">
+										
+        				              <div class="card">
+        				                <div class="card-header" id="headingOne" style="background-color:#202f64;">
+        				                  <h2 class="mb-0">
+        				                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" style="color:#ffffff;">LSCU FedPAC/CULAC</button>
+      				                    </h2>
+      				                  </div>
+        				                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        				                  <div class="card-body">
+											  
+											  <table width="100%" class="table table-striped">
+											  <thead>
+												  <tr><th colspan="2">Alabama</th>
+												  </tr>
+												  </thead>
+												  
+												  <tbody>
+													  <tr>
+													  <td>Representative Jerry Carl*</td>
+														  <td>1st Congressional District</td>
+													  </tr>
+													  <tr>
+													    <td>Representative Barry Moore*</td>
+													    <td>2nd Congressional District</td>
+												    </tr>
+													  <tr>
+													    <td>Representative Mike Rogers*</td>
+													    <td>3rd Congressional District</td>
+												    </tr>
+													  <tr>
+													    <td>Representative Robert Aderholt*</td>
+													    <td>4th Congressional District</td>
+												    </tr>
+													  <tr>
+													    <td>Dale Strong+</td>
+													    <td>5th Congressional District</td>
+												    </tr>
+													  <tr>
+													    <td>Representative Gary Palmer*</td>
+													    <td>6th Congressional District</td>
+												    </tr>
+													  <tr>
+													    <td>Representative Terri Sewell*</td>
+													    <td>7th Congressional District</td>
+												    </tr>
+													  <tr>
+													    <td>Katie Britt</td>
+													    <td>United States Senate</td>
+												    </tr>
+												  </tbody>
+											  </table>
+											  
+											  <table width="100%" class="table table-striped">
+											    <thead>
+											      <tr>
+											        <th colspan="2">Florida</th>
+										          </tr>
+										        </thead>
+											    <tbody>
+											      <tr>
+											        <td>Representative Al Lawson*</td>
+											        <td>2nd Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Kat Cammack*</td>
+											        <td>3rd Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative John Rutherford*</td>
+											        <td>4th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>State Senator Aaron Bean+</td>
+											        <td>5th Congressional District</td>
+										          </tr>
+													<tr>
+											        <td>Representative Michael Waltz*</td>
+											        <td>6th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Bill Posey*</td>
+											        <td>8th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Darren Soto*</td>
+											        <td>9th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>State Senator Randolph Bracy+</td>
+											        <td>10th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Daniel Webster*</td>
+											        <td>11th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Gus Bilirakis*</td>
+											        <td>12th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Kathy Castor*</td>
+											        <td>14th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Laurel Lee</td>
+											        <td>15th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Vern Buchanan*</td>
+											        <td>16th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Greg Steube*</td>
+											        <td>17th Congressional District</td>
+										          </tr>
+													<tr>
+											        <td>Representative Scott Franklin*</td>
+											        <td>18th Congressional District</td>
+										          </tr>
+											      
+											      <tr>
+											        <td>Representative Byron Donalds*</td>
+											        <td>19th Congressional District</td>
+										          </tr>
+													<tr>
+											        <td>Representative Brian Mast*</td>
+											        <td>21st Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Lois Frankel*</td>
+											        <td>22nd Congressional District</td>
+										          </tr>
+											      
+											      <tr>
+											        <td>Representative Frederica Wilson*</td>
+											        <td>24th Congressional District</td>
+										          </tr>
+													<tr>
+											        <td>Representative Debbie Wasserman Schultz*</td>
+											        <td>25th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Mario Diaz-Balart*</td>
+											        <td>26th Congressional District</td>
+										          </tr>
+											      
+											      <tr>
+											        <td>Representative Maria Elvira Salazar*</td>
+											        <td>27th Congressional District</td>
+										          </tr>
+													<tr>
+											        <td>Representative Carlos Gimenez*</td>
+											        <td>28th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Senator Marco Rubio*</td>
+											        <td>United States Senate</td>
+										          </tr>
+										        </tbody>
+										    </table>
+											  <table width="100%" class="table table-striped">
+											    <thead>
+											      <tr>
+											        <th colspan="2">Georgia</th>
+										          </tr>
+										        </thead>
+											    <tbody>
+											      <tr>
+											        <td>Representative Buddy Carter*</td>
+											        <td>1st Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Sanford Bishop*</td>
+											        <td>2nd Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Drew Ferguson*</td>
+											        <td>3rd Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Hank Johnson*</td>
+											        <td>4th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Nikema Williams*</td>
+											        <td>5th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Rich McCormick</td>
+											        <td>6th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Lucy McBath*</td>
+											        <td>7th Congressional District</td>
+										          </tr>
+													<tr>
+											        <td>Representative Carolyn Bourdeaux</td>
+											        <td>7th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Austin Scott*</td>
+											        <td>8th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Andrew Clyde*</td>
+											        <td>9th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Mike Collins</td>
+											        <td>10th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Barry Loudermilk*</td>
+											        <td>11th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative Rick Allen*</td>
+											        <td>12th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Representative David Scott*</td>
+											        <td>13th Congressional District</td>
+										          </tr>
+											      <tr>
+											        <td>Senator Rev. Raphael Warnock*</td>
+											        <td>United States Senate</td>
+										          </tr>
+										        </tbody>
+										    </table>
+											  <p><em>*Denotes Incumbent</em></p>
+											  <p><em>+Denotes elected official seeking higher office</em></p>
+      				                      </div>
+      				                  </div>
+      				                </div>
+
+        				              <div class="card">
+        				                <div class="card-header" id="headingEight" style="background-color:#202f64;">
+        				                  <h2 class="mb-0">
+        				                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" style="color:#ffffff;">ACULAC - Alabama State PAC</button>
+      				                    </h2>
+      				                  </div>
+        				                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+        				                  <div class="card-body">
+        				                    
+											  <table width="100%" class="table table-striped">
+											  <thead>
+												  <tr>
+												    <th>Candidate</th>
+												  <th>Office</th></tr>
+												  </thead>
+												  
+												  <tbody>
+												  <tr>
+													  <td>Governor Kay Ivey*</td>
+													  <td>Governor</td></tr>
+												  <tr>
+												    <td>Lt. Governor Will Ainsworth*</td>
+												    <td>Lt. Governor</td>
+												    </tr>
+												  <tr>
+												    <td>Attorney General Steve Marshall*</td>
+												    <td>Attorney General</td>
+												    </tr>
+												  <tr>
+												    <td>Greg Cook</td>
+												    <td>Supreme Court</td>
+												    </tr>
+												  <tr>
+												    <td>Representative Phillip Pettus*</td>
+												    <td>House District 1</td>
+												    </tr>
+												  <tr>
+												    <td>Jason Black+</td>
+												    <td>House District 2</td>
+												    </tr>
+												  <tr>
+												    <td>Representative Andrew Sorrell+</td>
+												    <td>House District 3</td>
+												    </tr>
+												  <tr>
+												    <td>Kerry Underwood+</td>
+												    <td>House District 3</td>
+												    </tr>
+												  <tr>
+												    <td>Representative Parker Moore*</td>
+												    <td>House District 4</td>
+												    </tr>
+													  <tr>
+												    <td>Representative Danny Crawford*</td>
+												    <td>House District 5</td>
+												    </tr>
+												  <tr>
+  <td>Representative Andy Whitt*</td>
+  <td>House District 6</td>
+  </tr>
+ <tr>
+  <td>Representative Proncey Robertson*</td>
+  <td>House District 7</td>
+  </tr>
+ <tr>
+  <td>Representative Terri Collins*</td>
+  <td>House District 8</td>
+  </tr>
+ <tr>
+  <td>Representative Scott Stadthagen*</td>
+  <td>House District 9</td>
+  </tr>
+ <tr>
+  <td>Representative Randall Shedd*</td>
+  <td>House District 11</td>
+  </tr>
+ <tr>
+  <td>Representative Corey Harbison*</td>
+  <td>House District 12</td>
+  </tr>
+ <tr>
+  <td>Matt Woods</td>
+  <td>House District 13</td>
+  </tr>
+ <tr>
+  <td>Representative Tim Wadsworth*</td>
+  <td>House District 14</td>
+  </tr>
+ <tr>
+  <td>Leigh Hulsey+</td>
+  <td>House District 15</td>
+  </tr>
+ <tr>
+  <td>Representative Kyle South*</td>
+  <td>House District 16</td>
+  </tr>
+ <tr>
+  <td>Representative Jamie Kiel*</td>
+  <td>House District 18</td>
+  </tr>
+ <tr>
+  <td>Representative Laura Hall*</td>
+  <td>House District 19</td>
+  </tr>
+ <tr>
+  <td>James Lomax</td>
+  <td>House District 20</td>
+  </tr>
+ <tr>
+  <td>Representative Rex Reynolds*</td>
+  <td>House District 21</td>
+  </tr>
+ <tr>
+  <td>Representative Tommy Hanes*</td>
+  <td>House District 23</td>
+  </tr>
+ <tr>
+  <td>Representative Nathaniel Ledbetter*</td>
+  <td>House District 24</td>
+  </tr>
+ <tr>
+  <td>Brock Colvin</td>
+  <td>House District 26</td>
+  </tr>
+ <tr>
+  <td>Representative Wes Kitchens*</td>
+  <td>House District 27</td>
+  </tr>
+ <tr>
+  <td>Representative Gil Isbell*</td>
+  <td>House District 28</td>
+  </tr>
+ <tr>
+  <td>Representative Craig Lipscomb*</td>
+  <td>House District 30</td>
+  </tr>
+ <tr>
+  <td>Representative Barbara Boyd*</td>
+  <td>House District 32</td>
+  </tr>
+ <tr>
+  <td>Representative Ben Robbins*</td>
+  <td>House District 33</td>
+  </tr>
+ <tr>
+  <td>Representative David Standridge*</td>
+  <td>House District 34</td>
+  </tr>
+ <tr>
+  <td>Representative Randy Wood*</td>
+  <td>House District 36</td>
+  </tr>
+ <tr>
+  <td>Representative Bob Fincher*</td>
+  <td>House District 37</td>
+  </tr>
+ <tr>
+  <td>Representative Debbie Wood*</td>
+  <td>House District 38</td>
+  </tr>
+ <tr>
+  <td>Representative Ginny Shaver*</td>
+
+  <td>House District 39</td>
+  </tr>
+ <tr>
+  <td>Representative Corley Ellis*</td>
+  <td>House District 41</td>
+  </tr>
+ <tr>
+  <td>Representative Van Smith*</td>
+  <td>House District 42</td>
+  </tr>
+ <tr>
+  <td>Representative Arnold Mooney*</td>
+  <td>House District 43</td>
+  </tr>
+ <tr>
+  <td>Representative Danny Garrett*</td>
+  <td>House District 44</td>
+  </tr>
+ <tr>
+  <td>Representative Dickie Drake*</td>
+  <td>House District 45</td>
+  </tr>
+ <tr>
+  <td>Representative David Faulkner*</td>
+  <td>House District 46</td>
+  </tr>
+ <tr>
+  <td>Mike Shaw</td>
+  <td>House District 47</td>
+  </tr>
+ <tr>
+  <td>Representative Jim Carns*</td>
+  <td>House District 48</td>
+  </tr>
+ <tr>
+  <td>Representative Russell Bedsole*</td>
+  <td>House District 49</td>
+  </tr>
+ <tr>
+  <td>Representative Jim Hill*</td>
+  <td>House District 50</td>
+  </tr>
+ <tr>
+  <td>Representative Allen Treadaway*</td>
+  <td>House District 51</td>
+  </tr>
+ <tr>
+  <td>Representative John Rogers*</td>
+  <td>House District 52</td>
+  </tr>
+ <tr>
+  <td>Representative Anthony Daniels*</td>
+  <td>House District 53</td>
+  </tr>
+ <tr>
+  <td>Representative Neil Rafferty*</td>
+  <td>House District 54</td>
+  </tr>
+ <tr>
+  <td>Representative Merika Coleman-Evans*</td>
+  <td>House District 57</td>
+  </tr>
+ <tr>
+  <td>Representative Rolanda Hollis*</td>
+  <td>House District 58</td>
+  </tr>
+ <tr>
+  <td>Representative Cynthia Almond*</td>
+  <td>House District 63</td>
+  </tr>
+ <tr>
+  <td>Donna Givens</td>
+  <td>House District 64</td>
+  </tr>
+ <tr>
+  <td>Representative Brett Easterbrook*</td>
+  <td>House District 65</td>
+  </tr>
+ <tr>
+  <td>Representative Alan Baker*</td>
+  <td>House District 66</td>
+  </tr>
+ <tr>
+  <td>Representative Prince Chestnut*</td>
+  <td>House District 67</td>
+  </tr>
+ <tr>
+  <td>Representative Thomas Jackson*</td>
+  <td>House District 68</td>
+  </tr>
+ <tr>
+  <td>Representative Kelvin Lawrence*</td>
+  <td>House District 69</td>
+  </tr>
+ <tr>
+  <td>Representative A.J. McCampbell*</td>
+  <td>House District 71</td>
+  </tr>
+ <tr>
+  <td>Representative Ralph Howard*</td>
+  <td>House District 72</td>
+  </tr>
+ <tr>
+  <td>Representative Kenneth Paschal*</td>
+  <td>House District 73</td>
+  </tr>
+ <tr>
+  <td>Representative Charlotte Meadows*</td>
+  <td>House District 74</td>
+  </tr>
+ <tr>
+  <td>Representative Reed Ingram*</td>
+  <td>House District 75</td>
+  </tr>
+ <tr>
+  <td>Representative Tashina Morris*</td>
+  <td>House District 77</td>
+  </tr>
+ <tr>
+  <td>Representative Joe Lovvorn*</td>
+  <td>House District 79</td>
+  </tr>
+ <tr>
+  <td>Representative Chris Blackshear*</td>
+  <td>House District 80</td>
+  </tr>
+ <tr>
+  <td>Representative Ed Oliver*</td>
+  <td>House District 81</td>
+  </tr>
+ <tr>
+  <td>Representative Pebblin Warren*</td>
+  <td>House District 82</td>
+  </tr>
+ <tr>
+  <td>Representative Jeremy Gray*</td>
+  <td>House District 83</td>
+  </tr>
+ <tr>
+  <td>Representative Berry Forte*</td>
+  <td>House District 84</td>
+  </tr>
+ <tr>
+  <td>Representative Dexter Grimsley*</td>
+  <td>House District 85</td>
+  </tr>
+ <tr>
+  <td>Representative Paul Lee*</td>
+  <td>House District 86</td>
+  </tr>
+ <tr>
+  <td>Representative Jeff Sorrells*</td>
+  <td>House District 87</td>
+  </tr>
+ <tr>
+  <td>Representative Chris Sells*</td>
+  <td>House District 90</td>
+  </tr>
+ <tr>
+  <td>Representative Rhett Marques*</td>
+  <td>House District 91</td>
+  </tr>
+ <tr>
+  <td>Representative Steve Clouse*</td>
+  <td>House District 93</td>
+  </tr>
+ <tr>
+  <td>Representative Joe Faust*</td>
+  <td>House District 94</td>
+  </tr>
+ <tr>
+  <td>Representative Matt Simpson*</td>
+  <td>House District 96</td>
+  </tr>
+ <tr>
+  <td>Representative Adline Clarke*</td>
+  <td>House District 97</td>
+  </tr>
+ <tr>
+  <td>Representative Napoleon Bracy*</td>
+  <td>House District 98</td>
+  </tr>
+ <tr>
+  <td>Representative Sam Jones*</td>
+  <td>House District 99</td>
+  </tr>
+ <tr>
+  <td>Representative Chris Pringle*</td>
+  <td>House District 101</td>
+  </tr>
+ <tr>
+  <td>Representative Shane Stringer*</td>
+  <td>House District 102</td>
+  </tr>
+ <tr>
+  <td>Representative Barbara Drummond*</td>
+  <td>House District 103</td>
+  </tr>
+ <tr>
+  <td>Representative Margie Wilcox*</td>
+  <td>House District 104</td>
+  </tr>
+ <tr>
+  <td>Representative Chip Brown*</td>
+  <td>House District 105</td>
+  </tr>
+ <tr>
+  <td>Senator Tim Melson*</td>
+  <td>Senate District 1</td>
+  </tr>
+ <tr>
+  <td>Senator Tom Butler*</td>
+  <td>Senate District 2</td>
+  </tr>
+ <tr>
+  <td>Senator Arthur Orr*</td>
+  <td>Senate District 3</td>
+  </tr>
+ <tr>
+  <td>Senator Garlan Gudger*</td>
+  <td>Senate District 4</td>
+  </tr>
+ <tr>
+  <td>Senator Greg Reed*</td>
+  <td>Senate District 5</td>
+  </tr>
+ <tr>
+  <td>Senator Larry Stutts*</td>
+  <td>Senate District 6</td>
+  </tr>
+ <tr>
+  <td>Senator Sam Givhan*</td>
+  <td>Senate District 7</td>
+  </tr>
+ <tr>
+  <td>Senator Steve Livingston*</td>
+  <td>Senate District 8</td>
+  </tr>
+ <tr>
+  <td>Senator Clay Scofield*</td>
+  <td>Senate District 9</td>
+  </tr>
+ <tr>
+  <td>Senator Andrew Jones*</td>
+  <td>Senate District 10</td>
+  </tr>
+ <tr>
+  <td>Lance Bell</td>
+  <td>Senate District 11</td>
+  </tr>
+ <tr>
+  <td>Keith Kelley</td>
+  <td>Senate District 12</td>
+  </tr>
+ <tr>
+  <td>Senator Randy Price*</td>
+  <td>Senate District 13</td>
+  </tr>
+ <tr>
+  <td>Senator April Weaver*</td>
+  <td>Senate District 14</td>
+  </tr>
+ <tr>
+  <td>Senator Dan Roberts*</td>
+  <td>Senate District 15</td>
+  </tr>
+ <tr>
+  <td>Senator Jabo Waggoner*</td>
+  <td>Senate District 16</td>
+  </tr>
+ <tr>
+  <td>Senator Shay Shelnutt*</td>
+  <td>Senate District 17</td>
+  </tr>
+ <tr>
+  <td>Senator Rodger Smitherman*</td>
+  <td>Senate District 18</td>
+  </tr>
+ <tr>
+  <td>Representative Louise Alexander+</td>
+  <td>Senate District 19</td>
+  </tr>
+ <tr>
+  <td>Senator Linda Coleman-Madison*</td>
+  <td>Senate District 20</td>
+  </tr>
+ <tr>
+  <td>Senator Gerald Allen*</td>
+  <td>Senate District 21</td>
+  </tr>
+ <tr>
+  <td>Senator Greg Albritton*</td>
+  <td>Senate District 22</td>
+  </tr>
+ <tr>
+  <td>Senator Bobby Singleton*</td>
+  <td>Senate District 24</td>
+  </tr>
+ <tr>
+  <td>Senator Will Barfoot*</td>
+  <td>Senate District 25</td>
+  </tr>
+ <tr>
+  <td>Senator Kirk Hatcher*</td>
+  <td>Senate District 26</td>
+  </tr>
+ <tr>
+  <td>Senator Tom Whatley*</td>
+  <td>Senate District 27</td>
+  </tr>
+ <tr>
+  <td>Senator Billy Beasley*</td>
+  <td>Senate District 28</td>
+  </tr>
+ <tr>
+  <td>Senator Donnie Chesteen*</td>
+  <td>Senate District 29</td>
+  </tr>
+ <tr>
+  <td>Senator Clyde Chambliss*</td>
+  <td>Senate District 30</td>
+  </tr>
+ <tr>
+  <td>Representative Mikes Jones+</td>
+  <td>Senate District 31</td>
+  </tr>
+ <tr>
+  <td>Senator Chris Elliott*</td>
+  <td>Senate District 32</td>
+  </tr>
+ <tr>
+  <td>Senator Vivian Davis Figures*</td>
+  <td>Senate District 33</td>
+  </tr>
+ <tr>
+  <td>Senator Jack Williams*</td>
+  <td>Senate District 34</td>
+  </tr>
+ <tr>
+   <td>Senator David Sessions*</td>
+   <td>Senate District 35</td>
+ </tr>
+												  </tbody>
+											  </table>
+											  
+   				                            <p>*Denotes incumbent</p>
+   				                            <p><em>+Denotes elected official seeking higher office</em></p>
+        				                  </div>
+      				                  </div>
+      				                </div>
+        				              <div class="card">
+        				                <div class="card-header" id="headingNine" style="background-color:#202f64;">
+        				                  <h2 class="mb-0">
+        				                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" style="color:#ffffff;">Florida CUPAC - Florida State PAC</button>
+      				                    </h2>
+      				                  </div>
+        				                <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+        				                  <div class="card-body">
+        				                    <table width="100%" class="table table-striped">
+        				                      <thead>
+        				                        <tr>
+        				                          <th>Candidate</th>
+        				                          <th>Office</th>
+      				                          </tr>
+      				                        </thead>
+        				                      <tbody>
+        				                        <tr>
+        				                          <td>Representative Michelle Salzman*</td>
+        				                          <td>House District 1</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Alex Andrade*</td>
+        				                          <td>House District 2</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Jayer Wiliamson*</td>
+        				                          <td>House District 3</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Vance Coley</td>
+        				                          <td>House District 5</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Griff Griffitts</td>
+        				                          <td>House District 6</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Jason Shoaf*</td>
+        				                          <td>House District 7</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Allison Tant*</td>
+        				                          <td>House District 9</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Sam Garrison*</td>
+        				                          <td>House District 11</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Garrett Dennis</td>
+        				                          <td>House District 14</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Dean Black*</td>
+        				                          <td>House District 15</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Chet Stokes</td>
+        				                          <td>House District 16</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Jessica Baker</td>
+        				                          <td>House District 17</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Paul Renner*</td>
+        				                          <td>House District 19</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Ralph Massullo*</td>
+        				                          <td>House District 23</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Joe Harding*</td>
+        				                          <td>House District 24</td>
+      				                          </tr>
+												  <tr>
+        				                          <td>Taylor Yarkosky</td>
+        				                          <td>House District 25</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Keith Truenow*</td>
+        				                          <td>House District 26</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Stan McClain*</td>
+        				                          <td>House District 27</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Tom Leek*</td>
+        				                          <td>House District 28</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Elizabeth Fetterhoff*</td>
+        				                          <td>House District 29</td>
+      				                          </tr>
+												  <tr>
+        				                          <td>Chase Tramont</td>
+        				                          <td>House District 30</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Tyler Sirois*</td>
+        				                          <td>House District 31</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Randy Fine*</td>
+        				                          <td>House District 33</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Rachel Plakon</td>
+        				                          <td>House District 36</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative David Smith*</td>
+        				                          <td>House District 38</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Jennifer Canady</td>
+        				                          <td>House District 40</td>
+      				                          </tr>
+												  <tr>
+        				                          <td>Allie Braswell</td>
+        				                          <td>House District 45</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Sam Killebrew*</td>
+        				                          <td>House District 48</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Josie Tomko*</td>
+        				                          <td>House District 51</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Jeff Holcomb</td>
+        				                          <td>House District 53</td>
+      				                          </tr>
+												  <tr>
+        				                          <td>Kevin Steele</td>
+        				                          <td>House District 55</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Adam Anderson</td>
+        				                          <td>House District 57</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Traci Koster*</td>
+        				                          <td>House District 66</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Fentrice Driskell*</td>
+        				                          <td>House District 67</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Lawrence McClure*</td>
+        				                          <td>House District 68</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Andrew Learned*</td>
+        				                          <td>House District 69</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Fiona McFarland*</td>
+        				                          <td>House District 73</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Michael Grant*</td>
+        				                          <td>House District 75</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Jenna Persons-Mulicka*</td>
+        				                          <td>House District 78</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Mike Giallombardo*</td>
+        				                          <td>House District 79</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Kaylee Tuck*</td>
+        				                          <td>House District 83</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative John Snyder*</td>
+        				                          <td>House District 86</td>
+      				                          </tr>
+												  <tr>
+        				                          <td>Representative Christine Hunschofsky*</td>
+        				                          <td>House District 95</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Dan Daley*</td>
+        				                          <td>House District 96</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Chip LaMarca*</td>
+        				                          <td>House District 100</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Bob Rommel*</td>
+        				                          <td>House District 106</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Tom Fabricio*</td>
+        				                          <td>House District 110</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative David Borrero*</td>
+        				                          <td>House District 111</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Alejandro Rizo Jr*</td>
+        				                          <td>House District 112</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Daniel Perez*</td>
+        				                          <td>House District 116</td>
+      				                          </tr>
+												  <tr>
+        				                          <td>Juan Carlos Porras</td>
+        				                          <td>House District 119</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Jim Mooney*</td>
+        				                          <td>House District 120</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Doug Broxson*</td>
+        				                          <td>Senate District 1</td>
+      				                          </tr>
+												  <tr>
+        				                          <td>Corey Simon</td>
+        				                          <td>Senate District 3</td>
+      				                          </tr>
+												  <tr>
+        				                          <td>Representative Clay Yarborough+</td>
+        				                          <td>Senate District 4</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Tracie Davis+</td>
+        				                          <td>Senate District 5</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Jennifer Bradley*</td>
+        				                          <td>Senate District 6</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Travis Hutson*</td>
+        				                          <td>Senate District 7</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Keith Perry*</td>
+        				                          <td>Senate District 9</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Jason Brodeur*</td>
+        				                          <td>Senate District 10</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Blaise Ingoglia+</td>
+        				                          <td>Senate District 11</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Janet Cruz*</td>
+        				                          <td>Senate District 14</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Darryl Rouson*</td>
+        				                          <td>Senate District 16</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Representative Nick DiCeglie*</td>
+        				                          <td>Senate District 18</td>
+      				                          </tr>
+												  <tr>
+        				                          <td>Senator Jim Boyd*</td>
+        				                          <td>Senate District 20</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Ed Hooper*</td>
+        				                          <td>Senate District 21</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Joe Gruters*</td>
+        				                          <td>Senate District 22</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Danny Burgess*</td>
+        				                          <td>Senate District 23</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Bobby Powell*</td>
+        				                          <td>Senate District 24</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Lori Berman*</td>
+        				                          <td>Senate District 26</td>
+      				                          </tr>
+												  <tr>
+        				                          <td>Senator Ben Albritton*</td>
+        				                          <td>Senate District 27</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Kathleen Passidomo*</td>
+        				                          <td>Senate District 28</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Tina Polsky*</td>
+        				                          <td>Senate District 30</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Shevrin Jones*</td>
+        				                          <td>Senate District 35</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Illeana Garcia*</td>
+        				                          <td>Senate District 36</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Jason Pizzo*</td>
+        				                          <td>Senate District 38</td>
+      				                          </tr>
+        				                        <tr>
+        				                          <td>Senator Ana Maria Rodriguez*</td>
+        				                          <td>Senate District 40</td>
+      				                          </tr>
+      				                        </tbody>
+      				                      </table>
+        				                    <p>&nbsp;</p>
+      				                    </div>
+      				                  </div>
+      				                </div>
+        				              <div class="card">
+        				                <div class="card-header" id="headingTen" style="background-color:#202f64;">
+        				                  <h2 class="mb-0">
+        				                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen" style="color:#ffffff;">Georgia CUPAC - Georgia State PAC</button>
+      				                    </h2>
+      				                  </div>
+        				                <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
+        				                  <div class="card-body">
+        				                    <table width="100%" class="table table-striped">
+        				                      <thead>
+        				                        <tr>
+        				                          <th>Candidate</th>
+        				                          <th>Office</th>
+      				                          </tr>
+      				                        </thead>
+        				                      <tbody>
+        				                        <tr>
+  <td>Governor Brian P. Kemp*</td>
+  <td>Governor</td>
+ </tr>
+ <tr>
+  <td>Senator Butch Miller+</td>
+  <td>Lt. Governor</td>
+ </tr>
+ <tr>
+  <td>Secretary Brad Raffensperger*</td>
+  <td>Secretary of State</td>
+</tr>
+ <tr>
+  <td>Senator Bruce Thompson+</td>
+  <td>Labor Commissioner</td>
+ </tr>
+
+ <tr>
+  <td>Representative Jason Ridley*</td>
+  <td>House District 6</td>
+ </tr>
+ <tr>
+  <td>Representative David Ralston*</td>
+  <td>House District 7</td>
+ </tr>
+ <tr>
+  <td>Representative Stan Gunter*</td>
+  <td>House District 8</td>
+ </tr>
+ <tr>
+  <td>Representative Rick Jasperse*</td>
+  <td>House District 11</td>
+ </tr>
+ <tr>
+  <td>Representative Matthew Gambill*</td>
+  <td>House District 15</td>
+ </tr>
+ <tr>
+  <td>Representative Trey Kelley*</td>
+  <td>House District 16</td>
+ </tr>
+ <tr>
+  <td>Representative Martin Momtahan*</td>
+  <td>House District 17</td>
+ </tr>
+ <tr>
+  <td>Representative Tyler Paul Smith*</td>
+  <td>House District 18</td>
+ </tr>
+ <tr>
+  <td>Representative Joseph Gullett*</td>
+  <td>House District 19</td>
+ </tr>
+ <tr>
+  <td>Representative Wes Cantrell*</td>
+  <td>House District 22</td>
+ </tr>
+ <tr>
+  <td>Representative Mandi Ballinger*</td>
+  <td>House District 23</td>
+ </tr>
+ <tr>
+  <td>Carter Barrett</td>
+  <td>House District 24</td>
+ </tr>
+ <tr>
+  <td>Representative Todd Jones*</td>
+  <td>House District 25</td>
+ </tr>
+ <tr>
+  <td>Representative Lee Hawkins*</td>
+  <td>House District 27</td>
+ </tr>
+ <tr>
+  <td>Representative Chris Erwin*</td>
+  <td>House District 28</td>
+ </tr>
+ <tr>
+  <td>Representative Matt Dubnik*</td>
+  <td>House District 29</td>
+ </tr>
+ <tr>
+  <td>Derrick McCollum</td>
+  <td>House District 30</td>
+ </tr>
+ <tr>
+  <td>Representative Emory Dunahoo*</td>
+  <td>House District 31</td>
+ </tr>
+ <tr>
+  <td>Representative Alan Powell*</td>
+  <td>House District 32</td>
+ </tr>
+ <tr>
+  <td>Representative Devan Seabaugh*</td>
+  <td>House District 34</td>
+ </tr>
+ <tr>
+  <td>Representative David Wilkerson*</td>
+  <td>House District 38</td>
+ </tr>
+ <tr>
+  <td>Representative Erica Thomas*</td>
+  <td>House District 39</td>
+ </tr>
+ <tr>
+  <td>Representative Teri Anulewicz*</td>
+  <td>House District 42</td>
+ </tr>
+ <tr>
+  <td>Representative Don Parsons*</td>
+  <td>House District 44</td>
+ </tr>
+ <tr>
+  <td>Representative John Carson*</td>
+  <td>House District 46</td>
+ </tr>
+ <tr>
+  <td>Representative Jan Jones*</td>
+  <td>House District 47</td>
+ </tr>
+ <tr>
+  <td>Representative Mary Robichaux*</td>
+  <td>House District 48</td>
+ </tr>
+ <tr>
+  <td>Representative Chuck Martin*</td>
+  <td>House District 49</td>
+ </tr>
+ <tr>
+  <td>Representative Shea Roberts*</td>
+  <td>House District 52</td>
+ </tr>
+ <tr>
+  <td>Deborah Silcox</td>
+  <td>House District 53</td>
+ </tr>
+ <tr>
+  <td>Representative Stacey Evans*</td>
+  <td>House District 57</td>
+ </tr>
+ <tr>
+  <td>Representative William Boddie*</td>
+  <td>House District 62</td>
+ </tr>
+ <tr>
+  <td>Representative Mandisha Thomas*</td>
+  <td>House District 65</td>
+ </tr>
+ <tr>
+  <td>Representative Lynn Smith*</td>
+  <td>House District 70</td>
+ </tr>
+ <tr>
+  <td>Representative Billy Mitchell*</td>
+  <td>House District 88</td>
+ </tr>
+ <tr>
+  <td>Representative Bee Nguyen*</td>
+  <td>House District 89</td>
+ </tr>
+ <tr>
+  <td>Representative Dar'shun Kendrick*</td>
+  <td>House District 83</td>
+ </tr>
+ <tr>
+  <td>Representative Peter Marin*</td>
+  <td>House District 96</td>
+ </tr>
+ <tr>
+  <td>Representative Bonnie Rich*</td>
+  <td>House District 97</td>
+ </tr>
+ <tr>
+  <td>Representative Marvin Lim*</td>
+  <td>House District 98</td>
+ </tr>
+ <tr>
+  <td>Matt Reeves</td>
+  <td>House District 99</td>
+ </tr>
+ <tr>
+  <td>Representative Gregg Kennard*</td>
+  <td>House District 102</td>
+ </tr>
+ <tr>
+  <td>Soo Hong</td>
+  <td>House District 103</td>
+ </tr>
+ <tr>
+  <td>Representative Chuck Efstration*</td>
+  <td>House District 104</td>
+ </tr>
+ <tr>
+  <td>Representative Donna McLeod*</td>
+  <td>House District 105</td>
+ </tr>
+ <tr>
+  <td>Representative Regina Lewis-Ward*</td>
+  <td>House District 109</td>
+ </tr>
+ <tr>
+  <td>Representative Clint Crowe*</td>
+  <td>House District 110</td>
+ </tr>
+ <tr>
+  <td>Representative El-Mahdi Holly*</td>
+  <td>House District 111</td>
+ </tr>
+ <tr>
+  <td>Representative Dave Belton*</td>
+  <td>House District 112</td>
+ </tr>
+ <tr>
+  <td>Representative Sharon Henderson*</td>
+  <td>House District 113</td>
+ </tr>
+ <tr>
+  <td>Representative Bruce Williamson*</td>
+  <td>House District 115</td>
+ </tr>
+ <tr>
+  <td>Representative Houston Gaines*</td>
+  <td>House District 117</td>
+ </tr>
+ <tr>
+  <td>Representative Spencer Frye*</td>
+  <td>House District 118</td>
+ </tr>
+ <tr>
+  <td>Representative Marcus Wiedower*</td>
+  <td>House District 119</td>
+ </tr>
+ <tr>
+  <td>RepresentativeTrey Rhodes*</td>
+  <td>House District 120</td>
+ </tr>
+ <tr>
+  <td>Representative Barry Fleming*</td>
+  <td>House District 121</td>
+ </tr>
+ <tr>
+  <td>Representative Mark Newton*</td>
+  <td>House District 123</td>
+ </tr>
+ <tr>
+  <td>Representative David Knight*</td>
+  <td>House District 130</td>
+ </tr>
+ <tr>
+  <td>Representative Vance Smith*</td>
+  <td>House District 133</td>
+ </tr>
+ <tr>
+  <td>Representative Richard Smith*</td>
+  <td>House District 134</td>
+ </tr>
+ <tr>
+  <td>Representative Carolyn Hugley*</td>
+  <td>House District 136</td>
+ </tr>
+ <tr>
+  <td>Representative Robert Dickey*</td>
+  <td>House District 140</td>
+ </tr>
+ <tr>
+  <td>Representative Dale Washburn*</td>
+  <td>House District 141</td>
+ </tr>
+ <tr>
+  <td>Representative James Beverly*</td>
+  <td>House District 143</td>
+ </tr>
+ <tr>
+  <td>Representative Debbie Buckner*</td>
+  <td>House District 147</td>
+ </tr>
+ <tr>
+  <td>Representative Shaw Blackmon*</td>
+  <td>House District 146</td>
+ </tr>
+ <tr>
+  <td>Representative Noel Williams*</td>
+  <td>House District 148</td>
+ </tr>
+ <tr>
+  <td>Representative Matt Hatchett*</td>
+  <td>House District 150</td>
+ </tr>
+ <tr>
+  <td>Representative Jon Burns*</td>
+  <td>House District 159</td>
+ </tr>
+ <tr>
+  <td>Representative Ron Stephens*</td>
+  <td>House District 164</td>
+ </tr>
+ <tr>
+  <td>Representative Darlene Taylor*</td>
+  <td>House District 173</td>
+ </tr>
+ <tr>
+  <td>Representative John Corbett*</td>
+  <td>House District 174</td>
+ </tr>
+ <tr>
+  <td>Representative James Burchett*</td>
+  <td>House District 176</td>
+ </tr>
+ <tr>
+  <td>Representative Don Hogan*</td>
+  <td>House District 179</td>
+ </tr>
+ <tr>
+  <td>Senator Ben Watson*</td>
+  <td>Senate District 1</td>
+ </tr>
+ <tr>
+  <td>Senator Lester Jackson*</td>
+  <td>Senate District 2</td>
+ </tr>
+ <tr>
+  <td>Senator Billy Hickman*</td>
+  <td>Senate District 4</td>
+ </tr>
+ <tr>
+  <td>Senator Russ Goodman*</td>
+  <td>Senate District 8</td>
+ </tr>
+ <tr>
+  <td>Senator Emanuel Jones*</td>
+  <td>Senate District 10</td>
+ </tr>
+ <tr>
+  <td>Senator Ed Harbison*</td>
+  <td>Senate District 15</td>
+ </tr>
+ <tr>
+  <td>Senator Marty Harbin*</td>
+  <td>Senate District 16</td>
+ </tr>
+ <tr>
+  <td>Senator Brian Strickland*</td>
+  <td>Senate District 17</td>
+ </tr>
+ <tr>
+  <td>Senator John F. Kennedy*</td>
+  <td>Senate District 18</td>
+ </tr>
+ <tr>
+  <td>Senator Blake Tillery*</td>
+  <td>Senate District 19</td>
+ </tr>
+ <tr>
+  <td>Senator Larry Walker*</td>
+  <td>Senate District 20</td>
+ </tr>
+ <tr>
+  <td>Senator Harold Jones II*</td>
+  <td>Senate District 22</td>
+ </tr>
+ <tr>
+  <td>Senator Max Burns*</td>
+  <td>Senate District 23</td>
+ </tr>
+ <tr>
+  <td>Senator David Lucas*</td>
+  <td>Senate District 26</td>
+ </tr>
+ <tr>
+  <td>Senator Matt Brass*</td>
+  <td>Senate District 28</td>
+ </tr>
+ <tr>
+  <td>Senator Michael Dugan *</td>
+  <td>Senate District 30</td>
+ </tr>
+ <tr>
+  <td>Senator Jason Anavitarte*</td>
+  <td>Senate District 31</td>
+ </tr>
+ <tr>
+  <td>Senator Kay Kirkpatrick*</td>
+  <td>Senate District 32</td>
+ </tr>
+ <tr>
+  <td>Senator Michael &quot;Doc&quot; Rhett*</td>
+  <td>Senate District 33</td>
+ </tr>
+ <tr>
+  <td>Senator Nan Orrock*</td>
+  <td>Senate District 36</td>
+ </tr>
+ <tr>
+  <td>Senator Horacena Tate*</td>
+  <td>Senate District 38</td>
+ </tr>
+ <tr>
+  <td>Senator Sonya Halpern*</td>
+  <td>Senate District 39</td>
+ </tr>
+ <tr>
+  <td>Senator Kim Jackson*</td>
+  <td>Senate District 41</td>
+ </tr>
+ <tr>
+  <td>Senator Elena Parent*</td>
+  <td>Senate District 42</td>
+ </tr>
+ <tr>
+  <td>Senator Gail Davenport*</td>
+  <td>Senate District 44</td>
+ </tr>
+ <tr>
+  <td>Senator Clint Dixon*</td>
+  <td>Senate District 45</td>
+ </tr>
+ <tr>
+  <td>Senator Bo Hatchett*</td>
+  <td>Senate District 50</td>
+ </tr>
+ <tr>
+  <td>Senator Steve Gooch*</td>
+  <td>Senate District 51</td>
+ </tr>
+ <tr>
+  <td>Senator Chuck Hufstetler*</td>
+  <td>Senate District 52</td>
+ </tr>
+ <tr>
+  <td>Senator Chuck Payne*</td>
+  <td>Senate District 54</td>
+ </tr>
+ <tr>
+  <td>Senator Gloria Butler*</td>
+  <td>Senate District 55</td>
+ </tr>
+ <tr>
+  <td>Senator John Albers*</td>
+  <td>Senate District 56</td>
+ </tr>
+ <tr>
+  <td>Senator Nikki Merritt*</td>
+  <td>Senate District 96</td>
+ </tr>
+ <tr>
+  <td>Mayor Cosby Johnson*</td>
+  <td>Mayor of Brunswick</td>
+ </tr>
+      				                        </tbody>
+      				                      </table>
+        				                    <p>*Denotes incumbent</p>
+        				                    <p><em>+Denotes elected official seeking higher office</em></p>
+      				                      </div>
+      				                  </div>
+      				                </div>
+      				              </div>
+      				            </div></td>
+      				        </tr>
+      				      </table></td>
+      				    </tr>
+        				  <tr>
+        				    <td height="25">&nbsp;</td>
+      				    </tr>
+        				  <tr>
+        				    <td align="left" style="color: #8c8c8C; font-size: 15px; font-family: 'PT Sans', Arial, sans-serif; line-height: 20px; background: #ffffff;" class="main-subheader"><p align="center"><img src="https://lscu.coop/temp/edu-monthly/imgs/lscu-logo.png" alt="LSCU Logo"></p>
+        				      <p align="center" style="color: #000000;">&nbsp;</p>
+        				      <p align="center" style="color: #000000;"><strong>Alabama Office:</strong> 22 Inverness Center Pkwy., Suite 200, Birmingham, AL 35242</p>
+        				      <p align="center" style="color: #000000;"><strong>Florida Office:</strong> 3692 Coolidge Court, Tallahassee, FL 32311</p>
+        				      <p align="center" style="color: #000000;"><strong>Georgia Office:</strong> 2810 Premiere Pkwy., Suite 150, Duluth, GA 30097</p>
+        				      <p align="center" style="color: #000000;">&nbsp;</p>
+        				      <p align="center" style="color: #000000;"><a href="https://www.linkedin.com/company/779108?trk=tyah&trkInfo=clickedVertical%3Acompany%2Cidx%3A1-1-1%2CtarId%3A1428961587176%2Ctas%3Aleague+of+southea" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/linkedin.png" alt="LinkedIn" width="25" height="25"></a>&nbsp;<a href="https://twitter.com/LeagueofSECUs" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/twitter.png" alt="Twitter" width="25" height="25"></a>&nbsp;<a href="https://www.facebook.com/LeagueofSoutheasternCreditUnions?ref=hl" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/facebook.png" alt="Facebook" width="25" height="25"></a>&nbsp;<a href="https://www.instagram.com/leagueofsoutheasterncus/" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/instagram.png" alt="Instagram" width="25" height="25"></a>&nbsp;</p>
+        				      <p align="center">&nbsp;</p></td>
+      				    </tr>
+      				  </table></td>
+        			</tr>
+				</table>
+			</td>
+		</tr>
+		<!------- end 2columns ------->
+
+		
+		<tr><td height="40"></td></tr>		
+				
+	</table>
+</body>
+</html>

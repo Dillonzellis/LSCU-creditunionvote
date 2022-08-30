@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- Define Charset -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Responsive Meta Tag -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+
+    <title>GOTV</title><!-- Responsive Styles and Valid Styles -->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+    .bs-example{
+        margin: 20px;
+    }
+</style>
+	
+    <style type="text/css">
+    
+    	
+	    body{
+            width: 100%; 
+            margin:0; 
+            padding:0; 
+            -webkit-font-smoothing: antialiased;
+			/* Location of the image */
+  background-image: url("imgs/bg.jpg");
+  
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+  
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+  
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#464646;
+  
+  /* SHORTHAND CSS NOTA
+   * background: url(imgs/bg.jpg) center center cover no-repeat fixed;
+   */
+        }
+        
+        p,h1,h2,h3,h4,img{
+	        margin-top:0;
+			margin-bottom:0;
+			padding-top:0;
+			padding-bottom:0;
+			color: #000000;
+        }
+		
+		a{
+			color: #154da2;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		
+		.myButton {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:10px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+	color: #fff;
+	text-decoration: underline;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+		
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(imgs/bg.jpg);
+  }
+	}
+        
+        span.preheader{display: none; font-size: 1px;}
+        
+        html{
+            width: 100%; 
+        }
+        
+        table{
+            font-size: 16px;
+            border: 0;
+        }
+        
+        /* ----------- responsivity ----------- */
+        @media only screen and (max-width: 640px){
+			/*------ top header ------ */
+			.view-online{font-size: 12px !important;}
+            .main-header{line-height: 28px !important; font-size: 17px !important;}
+            .main-subheader{line-height: 28px !important;}
+            
+			/*----- main image -------*/
+			.main-image{width: 100% !important; height: auto !important;}
+			
+			/*-------- container --------*/			
+			.container600{width: 440px !important;}
+			.container560{width: 400px !important;}
+			
+			/*-------- divider --------*/			
+			.divider{width: 440px !important; height: 1px !important;}
+			
+			/*----- banner -------*/
+			.banner{width: 400px !important; height: auto !important;}
+			/*-------- secions ----------*/
+			.section-item{width: 400px !important;}
+            .section-img{width: 400px !important; height: auto !important;}
+			           
+			/*-------- footer ------------*/
+			.unsubscribe{line-height: 26px !important; font-size: 13px !important;}
+			.copy{line-height: 26px !important; font-size: 14px !important;}
+			.hide-iphone{display: none !important;}
+			.vertical-spacing{width: 400px !important;}		
+			.footer-item{width: 200px !important;}
+		}
+		
+		@media only screen and (max-width: 479px){
+			
+			/*------ top header ------ */
+			.view-online{font-size: 12px !important;}
+            .main-header{line-height: 28px !important; font-size: 15px !important;}
+            .main-subheader{line-height: 28px !important;}
+            .logo{width: 280px !important;}
+            .nav{width: 280px !important;}
+			/*----- main image -------*/
+			.main-image{width: 100% !important; height: auto !important;}
+			
+			/*-------- container --------*/			
+			.container600{width: 100% !important;}
+			.container560{width: 240px !important;}
+			
+			/*-------- divider --------*/			
+			.divider{width: 280px !important; height: 1px !important;}
+			
+			/*----- banner -------*/
+			.banner{width: 240px !important; height: auto !important;}
+			/*-------- secions ----------*/
+			.section-item{width: 240px !important;}
+            .section-img{width: 240px !important; height: auto !important;}
+			           
+			/*-------- footer ------------*/
+			.unsubscribe{line-height: 26px !important; font-size: 13px !important;}
+			.copy{line-height: 26px !important; font-size: 14px !important;}
+			.hide-iphone{display: block !important;}
+			.vertical-spacing{width: 240px !important;}		
+			.footer-item{width: 240px !important;}
+			
+			
+		}
+		
+	.main-header {line-height: 28px !important; font-size: 17px !important;}
+.main-header {line-height: 28px !important; font-size: 15px !important;}
+.section-item {width: 400px !important;}
+.section-item {width: 240px !important;}
+    </style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-12265204-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-12265204-1');
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+
+	<table border="0" width="100%" cellpadding="0" cellspacing="0">
+	
+		
+		<!-------------- top header ------------->
+		<tr mc:repeatable>
+			<td align="center">
+				<table width="900" cellpadding="0" align="center" cellspacing="0" border="0" class="container600">
+					<tr>
+						<td align="center">
+							<table align="center" width="100%" cellpadding="0" cellspacing="0">
+								<tr>
+									<td width="63%" style="padding: 15px;">&nbsp;</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!-------------- end top header ------------->
+
+		
+		<!-------------- main image ------------->
+		<tr mc:repeatable>
+			<td align="center">
+				<table width="900" cellpadding="0" align="center" cellspacing="0" border="0" class="container600">
+					<tr>
+						<td align="center">
+				        	<img editable="true" mc:edit="main-image" src="imgs/header.png" style="display: block; width: 900px; height: 301px;" border="0" alt="main image" class="main-image" />
+				        </td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<!-------------- main text ------------->
+		<tr mc:repeatable>
+			<td align="center">
+				<table width="900" cellpadding="0" align="center" cellspacing="0" border="0" class="container600">
+					<tr>
+        				<td align="center">
+        					<table border="0" width="100%" align="center" cellpadding="5" cellspacing="0">
+        						
+       						  <tr><td height="25" align="center" style="font-size: 18px; font-family: 'PT Sans', Arial, sans-serif; line-height: 20px; color: #fff;"><a href="index.html" class="myButton">LSCU Endorsed Candidates</a> <a href="supported.html" class="myButton">LSCU PACs Supported Candidates</a> <a href="resources.html" class="myButton">Voter Resources</a></td></tr>
+        						<tr>
+       							  <td align="left" mc:edit="main-subheader" style="font-size: 18px; font-family: 'PT Sans', Arial, sans-serif; line-height: 20px;" class="main-subheader" bgcolor="#ffffff"><table border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+       							    <tr>
+       							      <td width="100%" valign="top"><br>
+       							        <h1 id="election">Voter Resources</h1>
+       							        <p>&nbsp;</p>
+       							        <p>When it comes to voting, knowledge is power. Here you will find the Alabama, Florida, and Georgia election calendars to keep you up to date on all important election dates.  If you are not registered to vote, please take the time to register below.</p>
+       							        <p>&nbsp;</p>
+										  <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/7K0NlnZ7Ma8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+									  <p>&nbsp;</p>
+       							        <div class="bs-example">
+       							          <div class="accordion" id="accordionExample">
+       							            <div class="card">
+       							              <div class="card-header" id="headingEleven" style="background-color:#202f64;">
+       							                <h2 class="mb-0">
+       							                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEleven" style="color:#ffffff;">Alabama Election Calendar</button>
+   							                    </h2>
+   							                  </div>
+       							              <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionExample">
+       							                <div class="card-body">
+       							                  <p>May 9th		Voter Registration Deadline</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>May 17th	Last Day to Apply for an Absentee Ballot by Mail</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>May 19th 	Last Day for Voter to Apply for an Absentee Ballot in Person</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>May 23rd 	Last Day for Voter to Hand-Deliver Absentee Ballot</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>May 24th	Absentee Ballots Returned by Mail Must be Received by Noon</p>
+       							                  <p>&nbsp;</p>
+       							                  <p><strong>MAY 24TH	PRIMARY ELECTION</strong></p>
+       							                  <p>&nbsp;</p>
+       							                  <p>June 6th		Voter Registration Deadline.</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>June 14th	Last Day to Apply for an Absentee Ballot by Mail.</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>June 16th	Last Day for Voter to Apply for an Absentee Ballot In-Person.</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>June 20th	Last Day for Voter to Hand-Deliver Absentee Ballot.</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>June 21st  	Absentee Ballots Returned by Mail Must be Received by Noon.</p>
+       							                  <p>&nbsp;</p>
+       							                  <p><strong>JUNE 24TH	RUNOFF ELECTION</strong></p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Oct 24th		Voter Registration Deadline.</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Nov 1st 		Last Day to Apply for an Absentee Ballot by Mail.</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Nov 3rd 		Last Day for Voter to Apply for an Absentee Ballot In-Person.</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Nov 7th  		Last Day for Voter to Hand-Deliver an Absentee Ballot.</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Nov 8th  		Absentee Ballots Returned by Mail Must be Received by Noon</p>
+       							                  <p>&nbsp;</p>
+       							                  <p><strong>NOV 8TH 	GENERAL ELECTION</strong><br>
+   							                      </p>
+   							                    </div>
+   							                  </div>
+   							                </div>
+       							            <div class="card">
+       							              <div class="card-header" id="headingTwelve" style="background-color:#202f64;">
+       							                <h2 class="mb-0">
+       							                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwelve" style="color:#ffffff;">Florida Election Calendar</button>
+   							                    </h2>
+   							                  </div>
+       							              <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordionExample">
+       							                <div class="card-body">
+       							                  <p>July 25th		Deadline to Register to Vote in the Primary</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>August 13th	Primary Early Voting Begins. Deadline to Request a Vote-by-Mail Ballot</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>August 20th	Primary Early Voting Ends</p>
+       							                  <p>&nbsp;</p>
+       							                  <p><strong>AUGUST 23RD 	PRIMARY ELECTION</strong></p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Oct 11th		Deadline to Register to Vote in the General Election</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Oct 29th 	Early Voting Begins, Deadline to Request a General Election Vote-by-Mail Ballot</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Nov 5th		Early Voting Ends</p>
+       							                  <p>&nbsp;</p>
+       							                  <p><strong>NOV 8TH	GENERAL ELECTION</strong></p>
+   							                    </div>
+   							                  </div>
+   							                </div>
+       							            <div class="card">
+       							              <div class="card-header" id="headingThirteen" style="background-color:#202f64;">
+       							                <h2 class="mb-0">
+       							                  <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThirteen" style="color:#ffffff;">Georgia Election Calendar</button>
+   							                    </h2>
+   							                  </div>
+       							              <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordionExample">
+       							                <div class="card-body">
+       							                  <p>April 1st 	Last Day to Submit a Request for an Absentee Ballot</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>April 25th 	Deadline to Register to Vote in the Primary (in person, by mail, or online)</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>May 2nd	Early Voting Begins for the Primary</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>May 23rd	Last Day to Register to Vote for the Runoff Election (in person, by mail, or online)</p>
+       							                  <p>&nbsp;</p>
+       							                  <p><strong>MAY 24	PRIMARY ELECTION</strong></p>
+       							                  <p>&nbsp;</p>
+       							                  <p>June 13th	Early Voting for the Primary Runoff Will Begin No Later Than This Date</p>
+       							                  <p>&nbsp;</p>
+       							                  <p><strong>JUNE 21	PRIMARY RUNOFF ELECTION</strong></p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Oct 10th	Last Day to Register to Vote for the General Election (in person, by mail, or online)</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Oct 17th	Early Voting Begins for the General Election</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Oct 28th	Last day to Submit for a Request Absentee Ballot for the November General Election</p>
+       							                  <p>&nbsp;</p>
+       							                  <p>Nov 7th		Last Day to Register to Vote (in person, by mail, or online)</p>
+       							                  <p>&nbsp;</p>
+       							                  <p><strong>NOV 8TH	GENERAL ELECTION</strong></p>
+   							                    </div>
+   							                  </div>
+   							                </div>
+   							              </div>
+   							            </div>
+										<p>&nbsp;</p>
+										  
+										  <script type="text/javascript" src="https://www.votervoice.net/Scripts/hQcAAAAAAAA/Plugin.js?app=VoterRegistration"></script><vv:main></vv:main>
+										
+										</td>
+   							        </tr>
+   							      </table></td>
+        						</tr>
+								<tr><td height="25">&nbsp;</td></tr>
+								<tr>
+        						  <td align="left" style="color: #8c8c8C; font-size: 15px; font-family: 'PT Sans', Arial, sans-serif; line-height: 20px; background: #ffffff;" class="main-subheader">
+									<p align="center"><img src="https://lscu.coop/temp/edu-monthly/imgs/lscu-logo.png" alt="LSCU Logo"></p>
+									<p align="center" style="color: #000000;">&nbsp;</p>
+									<p align="center" style="color: #000000;"><strong>Alabama Office:</strong> 22 Inverness Center Pkwy., Suite 200, Birmingham, AL 35242</p>
+									<p align="center" style="color: #000000;"><strong>Florida Office:</strong> 3692 Coolidge Court, Tallahassee, FL 32311</p>
+									<p align="center" style="color: #000000;"><strong>Georgia Office:</strong> 2810 Premiere Pkwy., Suite 150, Duluth, GA 30097</p>
+									<p align="center" style="color: #000000;">&nbsp;</p>
+									<p align="center" style="color: #000000;"><a href="https://www.linkedin.com/company/779108?trk=tyah&trkInfo=clickedVertical%3Acompany%2Cidx%3A1-1-1%2CtarId%3A1428961587176%2Ctas%3Aleague+of+southea" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/linkedin.png" alt="LinkedIn" width="25" height="25"></a>&nbsp;<a href="https://twitter.com/LeagueofSECUs" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/twitter.png" alt="Twitter" width="25" height="25"></a>&nbsp;<a href="https://www.facebook.com/LeagueofSoutheasternCreditUnions?ref=hl" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/facebook.png" alt="Facebook" width="25" height="25"></a>&nbsp;<a href="https://www.instagram.com/leagueofsoutheasterncus/" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/instagram.png" alt="Instagram" width="25" height="25"></a>&nbsp;</p>
+									  <p align="center">&nbsp;</p>
+								  </td>
+      						  </tr>
+        					</table>			
+        				</td>
+        			</tr>
+				</table>
+			</td>
+		</tr>
+		<!------- end 2columns ------->
+
+		
+		<tr><td height="40"></td></tr>		
+				
+	</table>
+</body>
+</html>

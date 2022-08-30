@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!-- Define Charset -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Responsive Meta Tag -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+
+    <title>GOTV</title><!-- Responsive Styles and Valid Styles -->
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+    .bs-example{
+        margin: 20px;
+    }
+</style>
+	
+    <style type="text/css">
+    
+    	
+	    body{
+            width: 100%; 
+            margin:0; 
+            padding:0; 
+            -webkit-font-smoothing: antialiased;
+			/* Location of the image */
+  background-image: url("imgs/bg.jpg");
+  
+  /* Image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Image doesn't repeat */
+  background-repeat: no-repeat;
+  
+  /* Makes the image fixed in the viewport so that it doesn't move when 
+     the content height is greater than the image height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based on its container's size */
+  background-size: cover;
+  
+  /* Pick a solid background color that will be displayed while the background image is loading */
+  background-color:#464646;
+  
+  /* SHORTHAND CSS NOTA
+   * background: url(imgs/bg.jpg) center center cover no-repeat fixed;
+   */
+        }
+        
+        p,h1,h2,h3,h4,img{
+	        margin-top:0;
+			margin-bottom:0;
+			padding-top:0;
+			padding-bottom:0;
+			color: #000000;
+        }
+		
+		a{
+			color: #154da2;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		
+		.myButton {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:10px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+	color: #fff;
+	text-decoration: underline;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+		
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(imgs/bg.jpg);
+  }
+	}
+        
+        span.preheader{display: none; font-size: 1px;}
+        
+        html{
+            width: 100%; 
+        }
+        
+        table{
+            font-size: 16px;
+            border: 0;
+        }
+        
+        /* ----------- responsivity ----------- */
+        @media only screen and (max-width: 640px){
+			/*------ top header ------ */
+			.view-online{font-size: 12px !important;}
+            .main-header{line-height: 28px !important; font-size: 17px !important;}
+            .main-subheader{line-height: 28px !important;}
+            
+			/*----- main image -------*/
+			.main-image{width: 100% !important; height: auto !important;}
+			
+			/*-------- container --------*/			
+			.container600{width: 440px !important;}
+			.container560{width: 400px !important;}
+			
+			/*-------- divider --------*/			
+			.divider{width: 440px !important; height: 1px !important;}
+			
+			/*----- banner -------*/
+			.banner{width: 400px !important; height: auto !important;}
+			/*-------- secions ----------*/
+			.section-item{width: 400px !important;}
+            .section-img{width: 400px !important; height: auto !important;}
+			           
+			/*-------- footer ------------*/
+			.unsubscribe{line-height: 26px !important; font-size: 13px !important;}
+			.copy{line-height: 26px !important; font-size: 14px !important;}
+			.hide-iphone{display: none !important;}
+			.vertical-spacing{width: 400px !important;}		
+			.footer-item{width: 200px !important;}
+		}
+		
+		@media only screen and (max-width: 479px){
+			
+			/*------ top header ------ */
+			.view-online{font-size: 12px !important;}
+            .main-header{line-height: 28px !important; font-size: 15px !important;}
+            .main-subheader{line-height: 28px !important;}
+            .logo{width: 280px !important;}
+            .nav{width: 280px !important;}
+			/*----- main image -------*/
+			.main-image{width: 100% !important; height: auto !important;}
+			
+			/*-------- container --------*/			
+			.container600{width: 100% !important;}
+			.container560{width: 240px !important;}
+			
+			/*-------- divider --------*/			
+			.divider{width: 280px !important; height: 1px !important;}
+			
+			/*----- banner -------*/
+			.banner{width: 240px !important; height: auto !important;}
+			/*-------- secions ----------*/
+			.section-item{width: 240px !important;}
+            .section-img{width: 240px !important; height: auto !important;}
+			           
+			/*-------- footer ------------*/
+			.unsubscribe{line-height: 26px !important; font-size: 13px !important;}
+			.copy{line-height: 26px !important; font-size: 14px !important;}
+			.hide-iphone{display: block !important;}
+			.vertical-spacing{width: 240px !important;}		
+			.footer-item{width: 240px !important;}
+			
+			
+		}
+		
+	.main-header {line-height: 28px !important; font-size: 17px !important;}
+.main-header {line-height: 28px !important; font-size: 15px !important;}
+.section-item {width: 400px !important;}
+.section-item {width: 240px !important;}
+    </style>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-12265204-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-12265204-1');
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+
+	<table border="0" width="100%" cellpadding="0" cellspacing="0">
+	
+		
+		<!-------------- top header ------------->
+		<tr mc:repeatable>
+			<td align="center">
+				<table width="900" cellpadding="0" align="center" cellspacing="0" border="0" class="container600">
+					<tr>
+						<td align="center">
+							<table align="center" width="100%" cellpadding="0" cellspacing="0">
+								<tr>
+									<td width="63%" style="padding: 15px;">&nbsp;</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<!-------------- end top header ------------->
+
+		
+		<!-------------- main image ------------->
+		<tr mc:repeatable>
+			<td align="center">
+				<table width="900" cellpadding="0" align="center" cellspacing="0" border="0" class="container600">
+					<tr>
+						<td align="center">
+				        	<img editable="true" mc:edit="main-image" src="imgs/header.png" style="display: block; width: 900px; height: 301px;" border="0" alt="main image" class="main-image" />
+				        </td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		
+		<!-------------- main text ------------->
+		<tr mc:repeatable>
+			<td align="center">
+				<table width="900" cellpadding="0" align="center" cellspacing="0" border="0" class="container600">
+					<tr>
+        				<td align="center">
+        					<table border="0" width="100%" align="center" cellpadding="5" cellspacing="0">
+        						
+       						  <tr><td height="25" align="center" style="font-size: 18px; font-family: 'PT Sans', Arial, sans-serif; line-height: 20px; color: #fff;"><a href="index.html" class="myButton">LSCU Endorsed Candidates</a> <a href="supported.html" class="myButton">LSCU PACs Supported Candidates</a> <a href="resources.html" class="myButton">Voter Resources</a></td></tr>
+        						<tr>
+       							  <td align="left" mc:edit="main-subheader" style="font-size: 18px; font-family: 'PT Sans', Arial, sans-serif; line-height: 20px;" class="main-subheader" bgcolor="#ffffff">
+       								  <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%">
+									  	<tr>
+											<td width="100%" valign="top">
+												<br>
+												<h1 id="lscu1">LSCU Endorsed Candidates</h1>
+												<p>&nbsp;</p>
+											  <p>Representing Alabama, Florida, and Georgia credit unions and their more than 10.3 million members, the League of Southeastern Credit Unions & Affiliates is proud to announce key congressional and statewide endorsements for the 2022 Election Cycle.</p>
+												
+												<p>&nbsp;</p>
+												
+												<p>With these endorsements, LSCU & Affiliates will support these candidates financially and through grassroots efforts. Over the next several months, credit unions and their members will have opportunities to speak with the candidates so they can make their own decisions as voters.</p>
+												
+												<p>&nbsp;</p>
+											  <div class="bs-example">
+											    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingTwo" style="background-color:#202f64;">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" style="color:#ffffff;">Alabama</button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+					<table width="100%" class="table table-striped">
+					  <thead>
+					    <tr>
+					      <th width="50%">Candidate</th>
+							<th width="50%">Office</th>
+					      </tr>
+					    </thead>
+					  <tbody>
+					    <tr>
+					      <td>Governor <a href="https://kayiveyforgovernor.com/" target="_blank">Kay Ivey*</a></td>
+					      <td>Governor of Alabama</td>
+					      </tr>
+					    <tr>
+					      <td>Lt. Governor <a href="https://www.ainsworthforalabama.com/" target="_blank">Will Ainsworth*</a></td>
+					      <td>Lt. Governor of Alabama</td>
+					      </tr>
+					    <tr>
+					      <td>Attorney General <a href="https://marshallforalabama.com/" target="_blank">Steve Marshall*</a></td>
+					      <td>Attorney General of Alabama</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://jerrycarlforcongress.com/" target="_blank">Jerry Carl*</a></td>
+					      <td>1st Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://barrymooreforcongress.com/" target="_blank">Barry Moore*</a></td>
+					      <td>2nd Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="http://www.mikerogersforcongress.com/" target="_blank">Mike Rogers*</a></td>
+					      <td>3rd Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://aderholtforcongress.org/" target="_blank">Robert Aderholt*</a></td>
+					      <td>4th Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td><a href="https://www.dalestrongforcongress.com/about" target="_blank">Dale Strong+</a></td>
+					      <td>5th Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td height="45"><a href="https://www.katiebrittforsenate.com/" target="_blank">Katie Britt</a></td>
+					      <td>United States Senate</td>
+					      </tr>
+					    </tbody>
+					  </table>
+					<p>&nbsp;</p>
+					<p><em>*Denotes Incumbent</em></p>
+					<p><em>+Denotes elected official seeking higher office</em></p>
+				</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree" style="background-color:#202f64;">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" style="color:#ffffff;">Georgia</button>                     
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+				
+					<table width="100%" class="table table-striped">
+					  <thead>
+					    <tr>
+					      <th>Candidate</th>
+					      <th>Office</th>
+					      </tr>
+					    </thead>
+					  <tbody>
+					    <tr>
+					      <td>Governor <a href="https://briankemp2022.com/" target="_blank">Brian P. Kemp*</a></td>
+					      <td>Governor of Georgia</td>
+					      </tr>
+					    <tr>
+					      <td>State Senator <a href="https://butchmillerforgeorgia.com/about/" target="_blank">Butch Miller+</a></td>
+					      <td>Lt. Governor of Georgia</td>
+					      </tr>
+						  <tr>
+					      <td>Representative <a href="https://buddycarter.house.gov/" target="_blank">Buddy Carter*</a></td>
+					      <td>1st Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://sanfordbishop.com/" target="_blank">Sanford Bishop*</a></td>
+					      <td>2nd Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://fergusonforgeorgia.com/conservative-for-georgia/" target="_blank">Drew Ferguson*</a></td>
+					      <td>3rd Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://www.nikemaforcongress.com/" target="_blank">Nikema Williams*</a></td>
+					      <td>5th Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td><a href="https://www.richmccormick.us/" target="_blank">Rich McCormick</a></td>
+					      <td>6th Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://mikecollinsga.com/" target="_blank">Mike Collins*</a></td>
+					      <td>10th Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://standwithbarry.com/" target="_blank">Barry Loudermilk*</a></td>
+					      <td>11th Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="http://votedavidscott.com/about/" target="_blank">David Scott*</a></td>
+					      <td>13th Congressional District</td>
+					      </tr>
+					    
+					    </tbody>
+					  </table>
+					<p>&nbsp;</p>
+					<p><em>*Denotes Incumbent</em></p>
+					<p><em>+Denotes elected official seeking higher office</em></p>
+				
+				</div>
+            </div>
+        </div>
+		<div class="card">
+            <div class="card-header" id="headingFour" style="background-color:#202f64;">
+                <h2 class="mb-0">
+                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" style="color:#ffffff;">Florida</button>                     
+                </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+					
+					<table width="100%" class="table table-striped">
+					  <thead>
+					    <tr>
+					      <th>Candidate</th>
+					      <th>Office</th>
+					      </tr>
+					    </thead>
+					  <tbody>
+					    <tr>
+					      <td>Governor <a href="https://rondesantis.com/" target="_blank">Ron DeSantis*</a></td>
+					      <td>Governor of Florida</td>
+					      </tr>
+					    <tr>
+					      <td><a href="https://joinjimmy.com/" target="_blank">Jimmy Patronis*</a></td>
+					      <td>Chief Financial Officer of Florida</td>
+					      </tr>
+					    <tr>
+					      <td>Attorney General <a href="https://www.ashleymoody.com/" target="_blank">Ashley Moody*</a></td>
+					      <td>Attorney General of Florida</td>
+					      </tr>
+						  <tr>
+					      <td>Representative <a href="http://www.allawson.com/" target="_blank">Al Lawson*</a></td>
+					      <td>2nd Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://www.katforcongress.com/meet-kat" target="_blank">Kat Cammack*</a></td>
+					      <td>3rd Congressional District</td>
+					      </tr>
+						  <tr>
+					      <td>Representative <a href="https://rutherford.house.gov/" target="_blank">John Rutherford*</a></td>
+					      <td>4th Congressional District</td>
+					      </tr>
+					    
+					    <tr>
+					      <td>Representative <a href="https://billposey.com/" target="_blank">Bill Posey*</a></td>
+					      <td>8th Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://www.darrensoto.com/" target="_blank">Darren Soto*</a></td>
+					      <td>9th Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://bilirakisforcongress.com/" target="_blank">Gus Bilirakis*</a></td>
+					      <td>12th Congressional District</td>
+					      </tr>
+					    
+					    
+					    <tr>
+					      <td>Representative <a href="https://castor.house.gov/" target="_blank">Kathy Castor*</a></td>
+					      <td>14th Congressional District</td>
+					      </tr>
+						  <tr>
+					      <td>Representative <a href="https://www.vernbuchanan.com/" target="_blank">Vern Buchanan*</a></td>
+					      <td>16th Congressional District</td>
+					      </tr>
+					    <tr>
+					      <td>Representative <a href="https://donalds.house.gov/" target="_blank">Byron Donalds*</a></td>
+					      <td>19th Congressional District</td>
+					      </tr>
+					    </tbody>
+					  </table>
+					<p>&nbsp;</p>
+					<p><em>*Denotes Incumbent</em></p>
+					<p><em>+Denotes elected official seeking higher office</em></p>
+					
+				</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+										  </td>
+									    </tr>
+									  	
+									  </table>
+       							  </td>
+        						</tr>
+								<tr><td height="25">&nbsp;</td></tr>
+								<tr>
+        						  <td align="left" style="color: #8c8c8C; font-size: 15px; font-family: 'PT Sans', Arial, sans-serif; line-height: 20px; background: #ffffff;" class="main-subheader">
+									<p align="center"><img src="https://lscu.coop/temp/edu-monthly/imgs/lscu-logo.png" alt="LSCU Logo"></p>
+									<p align="center" style="color: #000000;">&nbsp;</p>
+									<p align="center" style="color: #000000;"><strong>Alabama Office:</strong> 22 Inverness Center Pkwy., Suite 200, Birmingham, AL 35242</p>
+									<p align="center" style="color: #000000;"><strong>Florida Office:</strong> 3692 Coolidge Court, Tallahassee, FL 32311</p>
+									<p align="center" style="color: #000000;"><strong>Georgia Office:</strong> 2810 Premiere Pkwy., Suite 150, Duluth, GA 30097</p>
+									<p align="center" style="color: #000000;">&nbsp;</p>
+									<p align="center" style="color: #000000;"><a href="https://www.linkedin.com/company/779108?trk=tyah&trkInfo=clickedVertical%3Acompany%2Cidx%3A1-1-1%2CtarId%3A1428961587176%2Ctas%3Aleague+of+southea" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/linkedin.png" alt="LinkedIn" width="25" height="25"></a>&nbsp;<a href="https://twitter.com/LeagueofSECUs" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/twitter.png" alt="Twitter" width="25" height="25"></a>&nbsp;<a href="https://www.facebook.com/LeagueofSoutheasternCreditUnions?ref=hl" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/facebook.png" alt="Facebook" width="25" height="25"></a>&nbsp;<a href="https://www.instagram.com/leagueofsoutheasterncus/" target="_blank"><img src="https://lscu.coop/temp/edcollins/imgs/instagram.png" alt="Instagram" width="25" height="25"></a>&nbsp;</p>
+									  <p align="center">&nbsp;</p>
+								  </td>
+      						  </tr>
+        					</table>			
+        				</td>
+        			</tr>
+				</table>
+			</td>
+		</tr>
+		<!------- end 2columns ------->
+
+		
+		<tr><td height="40"></td></tr>		
+				
+	</table>
+</body>
+</html>
